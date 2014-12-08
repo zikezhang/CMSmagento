@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    Mage
+ * @package     Mage_Reports
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <menu>
+        <report translate="title" module="reports">
+            <title>Reports</title>
+            <sort_order>80</sort_order>
+            <children>
+                <products translate="title" module="reports">
+                    <title>Products</title>
+                    <sort_order>30</sort_order>
+                    <children>
+                        <viewed translate="title" module="reports">
+                            <title>Most Viewed</title>
+                            <action>adminhtml/report_product/viewed</action>
+                        </viewed>
+                     </children>
+                </products>
+                <customers translate="title" module="reports">
+                    <title>Customers</title>
+                    <sort_order>40</sort_order>
+                    <children>
+                        <accounts translate="title" module="reports">
+                            <title>New Accounts</title>
+                            <action>adminhtml/report_customer/accounts</action>
+                        </accounts>
+                    </children>
+                </customers>
+                <search translate="title" module="reports">
+                    <title>Search Terms</title>
+                    <sort_order>60</sort_order>
+                    <action>adminhtml/report/search</action>
+                </search>
+                <statistics translate="title" module="reports">
+                    <sort_order>65535</sort_order>
+                    <title>Refresh Statistics</title>
+                    <action>adminhtml/report_statistics</action>
+                </statistics>
+            </children>
+        </report>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <report translate="title" module="reports">
+                        <title>Reports</title>
+                        <sort_order>80</sort_order>
+                        <children>
+                            <products translate="title">
+                                <title>Products</title>
+                                <children>
+                                    <viewed translate="title">
+                                        <title>Most Viewed</title>
+                                    </viewed>
+                                    <downloads translate="title">
+                                        <title>Downloads</title>
+                                    </downloads>
+                                </children>
+                            </products>
+                            <customers translate="title">
+                                <title>Customers</title>
+                                <children>
+                                    <accounts translate="title">
+                                        <title>New Accounts</title>
+                                    </accounts>
+                                </children>
+                            </customers>
+                            <review translate="title" module="catalog">
+                                <title>Reviews</title>
+                                <children>
+                                    <customer translate="title">
+                                        <title>Customers Reviews</title>
+                                    </customer>
+                                    <product translate="title">
+                                        <title>Products Reviews</title>
+                                    </product>
+                                </children>
+                            </review>
+                            <tags translate="title" module="tag">
+                                <title>Tags</title>
+                                <children>
+                                    <customer translate="title" module="tag">
+                                        <title>Customers</title>
+                                    </customer>
+                                    <popular translate="title" module="tag">
+                                        <title>Popular</title>
+                                    </popular>
+                                    <product translate="title" module="tag">
+                                        <title>Products</title>
+                                    </product>
+                                </children>
+                            </tags>
+                            <search translate="title">
+                                <title>Search Terms</title>
+                            </search>
+                            <statistics translate="title">
+                                <title>Statistics</title>
+                            </statistics>
+                        </children>
+                    </report>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <reports translate="title" module="reports">
+                                        <title>Reports</title>
+                                    </reports>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

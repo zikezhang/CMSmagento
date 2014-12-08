@@ -5,8 +5,8 @@ CMS magento is based on magento for CMS.You can created a new post just linke cr
 ### Featrued
 Remove Modules:
 
-```javascript
-* Mage_Authorizenet,
+```
+*Mage_Authorizenet,
 * Mage_Bundle,
 *Mage_CatalogInventory,
 *Mage_Centinel,
